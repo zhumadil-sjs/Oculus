@@ -1,8 +1,6 @@
 import { cartPrice, div } from './const.js';
-
 const Cart = div;
 Cart.className = 'cart';
-
 for ( let i  = 0; i < cartPrice.length; i++) {
 let cartItem = document.createElement('span');
 cartItem.innerHTML = `${cartPrice[i]}`;
