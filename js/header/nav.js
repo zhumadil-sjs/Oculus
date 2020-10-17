@@ -19,5 +19,6 @@ for (let i = 0; i < navLinks.length; i++) {
   a.style.textTransform = "uppercase";
   li.appendChild(a);
   ul.appendChild(li);
+
 }
 export default nav;

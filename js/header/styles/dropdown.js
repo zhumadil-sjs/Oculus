@@ -2,6 +2,7 @@ import { dropDown, span } from "../const.js";
 
 const arrow = span;
 
+
 arrow.innerHTML = `>`;
 arrow.style.position = "absolute";
 arrow.style.right = "0";
