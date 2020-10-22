@@ -1,0 +1,167 @@
+body {
+  -webkit-animation: 4s overflow linear forwards;
+          animation: 4s overflow linear forwards;
+}
+
+::-webkit-scrollbar {
+  opacity: 0;
+  display: none;
+}
+
+.preloader {
+  position: fixed;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  -webkit-animation: 1s overlay 2.5s linear forwards;
+          animation: 1s overlay 2.5s linear forwards;
+}
+
+.preloader h1 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 72px;
+  font-style: normal;
+  -webkit-animation: 1s hatam 0s ease-in-out forwards;
+          animation: 1s hatam 0s ease-in-out forwards;
+}
+
+@-webkit-keyframes overlay {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes overlay {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes hatam {
+  from {
+    font-size: 372px;
+  }
+  to {
+    font-size: 72px;
+  }
+}
+
+@keyframes hatam {
+  from {
+    font-size: 372px;
+  }
+  to {
+    font-size: 72px;
+  }
+}
+
+@keyframes hatam {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+  }
+}
+
+.header {
+  position: relative;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.header::before, .header::after {
+  content: "";
+  position: absolute;
+  left: auto;
+  top: 50px;
+  right: 0;
+  bottom: auto;
+  width: 100%;
+  height: 1px;
+  background-color: #eeeeee;
+}
+
+.header::after {
+  top: 150px;
+}
+
+.header-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100px;
+}
+
+.burger-menu {
+  width: 28px;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: #7b7b7b;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.burger-menu span::before, .burger-menu span::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  background-color: inherit;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.burger-menu span::before {
+  width: 28px;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.burger-menu span::after {
+  width: 14px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.burger-menu:hover span {
+  width: 28px;
+}
+
+.burger-menu:hover span::after {
+  width: 28px;
+}
+/*# sourceMappingURL=index.css.map */
