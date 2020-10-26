@@ -47,8 +47,8 @@ function countDown() {
   const hours = Math.floor(seconds / 3600) % 24;
   const minutes = Math.floor(seconds / 60) % 60;
   daysHTML.innerHTML = `${days}: `;
-  hoursHTML.innerHTML = `${hours < 10 ? `0${hours}:` : hours}`;
-  minutesHTML.innerHTML = `${minutes < 10 ? `0${minutes}:` : minutes}:`;
+  hoursHTML.innerHTML = `${hours < 10 ? `0${hours}` : hours}:`;
+  minutesHTML.innerHTML = `${minutes < 10 ? `0${minutes}` : minutes}:`;
   secondsHTML.innerHTML = `${totalSeconds < 10 ? `0${totalSeconds}` : totalSeconds}`;
 }
 countDown();
