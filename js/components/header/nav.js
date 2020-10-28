@@ -21,4 +21,4 @@ for (let i = 0; i < navLinks.length; i++) {
   ul.appendChild(li);
 }
 
-export default nav; 
+export default nav;

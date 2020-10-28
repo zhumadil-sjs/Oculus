@@ -15,4 +15,4 @@ logoLink.innerHTML =
 </svg>`;
 
 
-export default logo; 
+export default logo;

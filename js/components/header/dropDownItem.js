@@ -1,7 +1,9 @@
 import { languages } from './const.js';
 import dropDown from './style/dropdown.js';
 import { arrow } from './style/dropdown.js';
+
 let array = [];
+
 for (let i = 0; i < languages.length; i++) {
   var dropDownItems = document.createElement('li');
   dropDownItems.style.textTransform = 'uppercase';
@@ -13,6 +15,7 @@ for (let i = 0; i < languages.length; i++) {
     dropDownItems.style.opacity = '0';
   }
 }
+
 dropDown.addEventListener('click', function () {
   if (dropDown.className == 'is-active') {
     dropDown.style.height = '60px';
@@ -29,7 +32,6 @@ dropDown.addEventListener('click', function () {
     arrow.style.transform = 'rotate(90deg)';
   } else {
     dropDown.style.zIndex = '1';
-    dropDown.style.top = '60px';
     dropDown.style.top = '1.1vw';
     dropDown.style.height = 'auto';
     arrow.style.transform = 'rotate(-90deg)';

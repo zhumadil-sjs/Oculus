@@ -9,4 +9,4 @@ export const li = document.createElement('li');
 export const languages = ['English', 'Russian'];
 export const img = document.createElement('img');
 export const cartPrice = ['$0.0', 'Items'];
-export const colorGray = '#7b7b7b'; 
+export const colorGray = '#7b7b7b';

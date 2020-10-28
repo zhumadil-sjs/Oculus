@@ -2,6 +2,7 @@ import { dropDown, colorGray } from '../const.js';
 
 export const arrow = document.createElement('span');
 
+
 arrow.innerHTML = `>`;
 arrow.style.position = 'absolute';
 arrow.style.right = '0';

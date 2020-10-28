@@ -13,4 +13,4 @@ searchIcon.innerHTML = `
 </g>
 </svg>`
 
-export default searchIcon; 
+export default searchIcon;

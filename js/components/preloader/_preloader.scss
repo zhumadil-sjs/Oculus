@@ -1,6 +1,3 @@
-body {
-	overflow: hidden;
-}
 .preloader {
 	@include position(fixed, 0, 0);
 	@include flexbox;
@@ -11,28 +8,31 @@ body {
 	animation: 1s overlay 2.5s linear forwards;
 	h1 {
 		@include font("Poppins", 72px, 700);
-		animation: 1s hatam 0s ease-in-out forwards;
+		animation: 1s fontSize 0s ease-in-out forwards;
+	}
+	span {
+		color: red;
 	}
 }
 
 @keyframes overlay {
 	from {
-		left: 0;
-		transform: rotate(0deg);
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
 	}
 	to {
-		left: 100%;
-		transform: rotate(90deg);
+		opacity: 0;
+		visibility: hidden;
 	}
 }
 
-
-
-@keyframes hatam {
+@keyframes fontSize {
 	from {
 		font-size: 372px;
 	}
 	to {
 		font-size: 72px;
 	}
-} 
+}

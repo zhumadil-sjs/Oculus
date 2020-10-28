@@ -1,32 +1,26 @@
-import Nav from '../header/nav.js';
-import { container } from '../../base.js';
-
 const Footer = () => {
-  const footerNav = Nav.cloneNode(true);
   const footer = document.createElement('footer');
   const container = document.createElement('div');
-  const Footercontainer = container.cloneNode(false);
   const footerForm = document.createElement('form');
   const footerTitle = document.createElement('h2');
   const footerLabel = document.createElement('label');
   const footerInput = document.createElement('input');
   const footerButton = document.createElement('button');
   const socialIcon = [];
-  const CopyRight = document.createElement('span');
+  const copyRight = document.createElement('span');
 
   footer.className = 'footer';
   container.className = 'container';
-  Footercontainer.className = 'container';
   footerTitle.className = 'footer__title';
   footerLabel.className = 'footer__label';
   footerInput.className = 'footer__input';
   footerForm.className = 'footer__form';
   footerButton.className = 'footer__btn';
+
   footerInput.setAttribute('placeholder', 'Enter your email address');
 
   let maxim = 0;
 
-  // Это было для ребят, их хотелочка //
   footerButton.addEventListener('click', (event) => {
     const removeClass = () => {
       footerLabel.classList.remove('is-active');
@@ -37,12 +31,11 @@ const Footer = () => {
     }
     event.preventDefault();
     maxim += 1;
-    console.log(maxim);
+    // console.log(maxim);
     if (maxim % 5 === 0) {
       let video = document.createElement('video');
       const removeImg = () => {
         video.remove()
-        video.remove();
       };
       video.src = './assets/stop.mp4';
       video.setAttribute('autoplay', 'autoplay');
@@ -53,7 +46,6 @@ const Footer = () => {
       video.style.zIndex = '11';
       document.body.appendChild(video);
       setTimeout(removeImg, 2000)
-      setTimeout(removeImg, 2000);
     }
   });
 
@@ -65,10 +57,6 @@ const Footer = () => {
   footer.appendChild(container);
   container.appendChild(footerTitle);
   container.appendChild(footerForm);
-  footer.appendChild(Footercontainer);
-  Footercontainer.appendChild(footerTitle);
-  Footercontainer.appendChild(footerForm);
-  Footercontainer.appendChild(footerNav);
   return footer;
 };
 
