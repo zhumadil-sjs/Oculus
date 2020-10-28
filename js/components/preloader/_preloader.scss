@@ -1,9 +1,5 @@
 body {
-    animation: 4s overflow linear forwards;
-}
-::-webkit-scrollbar{
-    opacity: 0;
-    display: none;
+	overflow: hidden;
 }
 .preloader {
 	@include position(fixed, 0, 0);
@@ -21,30 +17,22 @@ body {
 
 @keyframes overlay {
 	from {
-	opacity: 1;
-    }
-    
+		left: 0;
+		transform: rotate(0deg);
+	}
 	to {
-	opacity: 0;
+		left: 100%;
+		transform: rotate(90deg);
 	}
 }
 
 
 
-@keyframes overflow {
+@keyframes hatam {
 	from {
 		font-size: 372px;
- 	}
+	}
 	to {
 		font-size: 72px;
 	}
-}
-
-@keyframes overflow {
-	from {
-        overflow: hidden;
-    }
-	to {
-        overflow: visible;
-	}
-}
+} 

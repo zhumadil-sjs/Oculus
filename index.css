@@ -1,11 +1,30 @@
 body {
-  -webkit-animation: 4s overflow linear forwards;
-          animation: 4s overflow linear forwards;
+  margin: 0;
 }
 
 ::-webkit-scrollbar {
-  opacity: 0;
   display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+body {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+body {
+  overflow: hidden;
 }
 
 .preloader {
@@ -42,19 +61,27 @@ body {
 
 @-webkit-keyframes overlay {
   from {
-    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    opacity: 0;
+    left: 100%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
 
 @keyframes overlay {
   from {
-    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    opacity: 0;
+    left: 100%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
 
@@ -73,15 +100,6 @@ body {
   }
   to {
     font-size: 72px;
-  }
-}
-
-@keyframes hatam {
-  from {
-    overflow: hidden;
-  }
-  to {
-    overflow: visible;
   }
 }
 
@@ -163,5 +181,170 @@ body {
 
 .burger-menu:hover span::after {
   width: 28px;
+}
+
+.footer {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.footer__title {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 35px;
+  font-style: normal;
+  margin: 0;
+}
+
+.footer__title__form {
+  position: relative;
+  width: 500px;
+  margin: auto;
+  margin: 40px auto 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__title__label {
+  position: relative;
+  width: 500px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.footer__title__label::before {
+  content: "";
+  position: absolute;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  width: 0;
+  height: 100%;
+  background-color: #293341;
+  z-index: 3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__title__label.is-active::before {
+  -webkit-animation: wave 1s ease-in-out;
+          animation: wave 1s ease-in-out;
+}
+
+.footer__title__input {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 16px;
+  font-style: normal;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.footer__title__btn {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 55px;
+  margin-left: -1px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.footer__title__btn::before {
+  content: "";
+  position: absolute;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  width: 0;
+  height: 100%;
+  background-color: #293341;
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__title__btn:hover {
+  color: #fff;
+}
+
+.footer__title__btn:hover::before {
+  width: 100%;
+}
+
+@-webkit-keyframes wave {
+  from {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  60% {
+    width: 100%;
+  }
+  70% {
+    width: 100%;
+  }
+  80% {
+    width: 100%;
+  }
+  90% {
+    width: 100%;
+  }
+  to {
+    width: 100%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes wave {
+  from {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  60% {
+    width: 100%;
+  }
+  70% {
+    width: 100%;
+  }
+  80% {
+    width: 100%;
+  }
+  90% {
+    width: 100%;
+  }
+  to {
+    width: 100%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }
 /*# sourceMappingURL=index.css.map */
