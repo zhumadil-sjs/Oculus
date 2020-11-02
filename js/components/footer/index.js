@@ -1,22 +1,19 @@
 import Nav from '../header/nav.js';
 import { container } from '../../base.js';
-const Footer = () => {
+
+// const Footer = (noned = false) => {
   const footerNav = Nav.cloneNode(true);
-  const footer = document.createElement('footer');
-  const Footercontainer = container.cloneNode(false);
+  export const footer = document.createElement('footer');
   const footercontainer = container.cloneNode(false);
   const footerForm = document.createElement('form');
   const footerTitle = document.createElement('h2');
   const footerLabel = document.createElement('label');
   const footerInput = document.createElement('input');
   const footerButton = document.createElement('button');
-  const socialIcon = [];
-  const copyRight = document.createElement('span');
   const socialIcon = document.createElement('ul');
   const copyRight = document.createElement('span');
 
   footer.className = 'footer';
-  Footercontainer.className = 'container';
   footerNav.className = 'footer__nav';
   socialIcon.className = 'footer__social social';
   copyRight.className = 'footer__copyright';
@@ -26,8 +23,11 @@ const Footer = () => {
   footerInput.className = 'footer__input';
   footerForm.className = 'footer__form';
   footerButton.className = 'footer__btn';
+
   footerInput.setAttribute('placeholder', 'Enter your email address');
+
   let maxim = 0;
+
   // Это было для ребят, их хотелочка //
   footerButton.addEventListener('click', (event) => {
     const removeClass = () => {
@@ -56,7 +56,6 @@ const Footer = () => {
       setTimeout(removeImg, 2000);
     }
   });
-
   socialIcon.innerHTML = `
   <li class='social__item'><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
   <li class='social__item'><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -70,17 +69,17 @@ const Footer = () => {
   footerLabel.appendChild(footerInput);
   footerForm.appendChild(footerLabel);
   footerForm.appendChild(footerButton);
-  footer.appendChild(Footercontainer);
-  Footercontainer.appendChild(footerTitle);
-  Footercontainer.appendChild(footerForm);
-  Footercontainer.appendChild(footerNav);
   footer.appendChild(footercontainer);
   footercontainer.appendChild(footerTitle);
   footercontainer.appendChild(footerForm);
   footercontainer.appendChild(footerNav);
   footercontainer.append(socialIcon);
   footercontainer.append(copyRight);
-  return footer;
-};
+  // if (noned == true) {
+  //   const root = document.getElementById("root")
+  //   root.removeChild(footer);
+  // }
+  // return footer;
+// };
 
-export default Footer;
+// export Footer;
