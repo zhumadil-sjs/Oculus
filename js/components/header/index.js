@@ -1,50 +1,36 @@
-import header from './components/header/index.js';
-import { imgWrapper, time } from './components/photoGenerator/index.js';
-import overlay from './components/preloader/index.js';
-import { footer } from './components/footer/index.js';
-import Decor from './routes/decor.js';
-import Decor from './routes/decor/decor.js';
-import { navLinksLocation } from './components/header/const.js';
+import { container } from '../../base.js';
+import { dropDown, header } from './const.js';
+import burgerMenu from './burgerMenu.js';
+import nav from './nav.js';
+import Cart from './cart.js';
+import logo from './logo.js';
+import searchIcon from './search.js'
+import './dropDownItem.js';
 
-const root = document.getElementById('root');
+const headerRow = document.createElement('div');
+const headerBottom = document.createElement('div');
 
-const deleter = () => {
-  const array = [header, time, imgWrapper, footer];
-  array.forEach((everyElement) => everyElement.remove());
-};
 
-const Bekjan = () => {
-  const navLink = [...document.getElementsByClassName('nav__links')];
-  navLink.forEach((item) =>
-    item.addEventListener('click', (eldar) => {
-      if (eldar.target.getAttribute('href') == '#decor') {
-        deleter();
-        root.append(Decor());
-      }
-    }),
-  );
-};
+headerBottom.className = 'header-bottom';
 
-root.appendChild(overlay);
-root.appendChild(header);
-root.appendChild(time);
-root.appendChild(imgWrapper);
-root.appendChild(footer);
+headerRow.style.display = 'flex';
+headerRow.style.justifyContent = 'space-between';
+headerRow.style.alignItems = 'center';
+headerRow.style.maxHeight = '50px';
 
-// Код ниже не писать/не копировать
+header.className = 'header';
 
-let navs = [...document.getElementsByClassName('nav__links')];
-navs.forEach((item) => {
-  item.addEventListener('click', (e) => {
-    console.log(item);
-    let attr = item.getAttribute('href');
-    console.log(attr);
-    window.location.href = attr;
-      e.preventDefault();
+header.appendChild(container);
+header.appendChild(headerRow);
+header.appendChild(headerBottom)
+container.appendChild(headerRow);
+container.appendChild(headerBottom)
+headerRow.appendChild(dropDown);
+headerRow.appendChild(nav);
+headerRow.appendChild(Cart);
 
-  });
-});
-console.log(navs);
+headerBottom.appendChild(burgerMenu)
+headerBottom.appendChild(logo)
+headerBottom.appendChild(searchIcon)
 
-root.append(Decor());
-Bekjan();
+export default header;
