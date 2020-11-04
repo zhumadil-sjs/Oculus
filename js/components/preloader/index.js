@@ -1,6 +1,6 @@
-const overlay = document.createElement('div');
+const overlay = document.createElement("div");
 
-overlay.className = 'preloader';
+overlay.className = "preloader";
 
 overlay.innerHTML = `<h1>OCOLUS<span>.</span></h1>`;
 
